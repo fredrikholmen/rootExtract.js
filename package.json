@@ -1,0 +1,23 @@
+{
+  "name": "root-extract.js",
+  "version": "1.0.0",
+  "description": "A simple function to extract the root domain from an url.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests --recursive --watch",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fredrikholmen/rootExtract.js.git"
+  },
+  "author": "Fredrik Holmén",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fredrikholmen/rootExtract.js/issues"
+  },
+  "homepage": "https://github.com/fredrikholmen/rootExtract.js#readme",
+  "devDependencies": {
+    "chai": "^3.5.0"
+  }
+}
