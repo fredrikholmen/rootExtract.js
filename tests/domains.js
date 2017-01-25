@@ -28,6 +28,14 @@ describe('root-extract', function() {
     expect(rooter.rootDomain("www.example.oz.au").rootDomain).to.equal("example.oz.au");
     expect(rooter.rootDomain("www.example.conf.au").rootDomain).to.equal("example.conf.au");
     expect(rooter.rootDomain("www.example.info.au").rootDomain).to.equal("example.info.au");
-    
+
+    //Mexico
+    expect(rooter.rootDomain("www.example.com.mx").rootDomain).to.equal("example.com.mx");
+    expect(rooter.rootDomain("www.example.net.mx").rootDomain).to.equal("example.net.mx");
+    expect(rooter.rootDomain("www.example.org.mx").rootDomain).to.equal("example.org.mx");
+    expect(rooter.rootDomain("www.example.ngo.mx").rootDomain).to.equal("example.ngo.mx");
+    expect(rooter.rootDomain("www.example.edu.mx").rootDomain).to.equal("example.edu.mx");
+    expect(rooter.rootDomain("www.example.gob.mx").rootDomain).to.equal("example.gob.mx");
+   
 });
 });
