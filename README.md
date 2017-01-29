@@ -1,4 +1,4 @@
-# rootExtract.js
+# rootextract.js
 Simple package to extract the root domain from an URL
 
 rootExtract.js takes a URL string parses it and returns a URL object with a rootDomain field.
@@ -12,7 +12,7 @@ rootExtract.js takes a URL string parses it and returns a URL object with a root
 ## Usage
 
 ```
-	const rooter = require('rootExtract.js')
+	const rooter = require('rootextract.js')
 
 	let link = "http://www.example.co.uk"
 
