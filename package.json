@@ -1,6 +1,6 @@
 {
   "name": "rootextract.js",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A simple function to extract the root domain from an url.",
   "main": "index.js",
   "scripts": {
