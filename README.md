@@ -6,7 +6,7 @@ rootExtract.js takes a URL string parses it and returns a URL object with a root
 ## Install
 
 ```
-	npm install rootExtract.js
+	npm install rootextract.js
 ```
 
 ## Usage
