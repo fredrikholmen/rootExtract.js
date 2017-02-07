@@ -1,12 +1,8 @@
 {
   "name": "rootextract.js",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A simple function to extract the root domain from an url.",
-  "main": "index.js",
-  "scripts": {
-    "test": "mocha tests --recursive --watch",
-    "start": "node index.js"
-  },
+  "main": "lib/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fredrikholmen/rootExtract.js.git"
@@ -18,6 +14,30 @@
   },
   "homepage": "https://github.com/fredrikholmen/rootExtract.js#readme",
   "devDependencies": {
-    "chai": "^3.5.0"
+    "babel-cli": "^6.14.0",
+    "babel-eslint": "^7.1.1",
+    "babel-preset-es2015": "^6.14.0",
+    "chai": "^3.5.0",
+    "chai-as-promised": "^6.0.0",
+    "coveralls": "^2.11.15",
+    "eslint": "^3.3.1",
+    "eslint-config-standard": "^6.0.0",
+    "eslint-plugin-mocha": "^4.3.0",
+    "eslint-plugin-node": "^4.0.0",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-standard": "^2.0.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.0.2",
+    "standard": "^8.0.0",
+    "testdouble": "^1.9.0"
+  },
+  "scripts": {
+    "clean": "rm -rf lib coverage",
+    "lint": "node_modules/.bin/eslint .",
+    "coverage": "node_modules/.bin/istanbul cover --include-all-sources --root src ./node_modules/mocha/bin/_mocha -- --recursive test",
+    "test": "npm run lint && npm run coverage",
+    "compile": "mkdir -p lib && ./node_modules/.bin/babel -o lib/index.js src/rootextract.js",
+    "prepublish": "npm run compile",
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
   }
 }
