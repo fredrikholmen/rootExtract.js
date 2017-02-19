@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-describe('rootExtract', () => {
+ describe('rootExtract', () => {
   let subject
 
   td.reset()
@@ -104,6 +104,22 @@ describe('rootExtract', () => {
 
         result.should.have.deep.property('rootDomain', mainDomain)
       })
+    })
+  })
+
+  describe('when parsing a HTTP link with just one letter', () => {
+    const domain = 't.co'
+    const link = `https://${domain}/567uhib2`
+
+    before(() => {
+      subject = require('../src/rootextract')
+    })
+
+    it(`should return the root domain as ${domain}`, () => {
+      const result = subject.parse(link)
+
+      result.should.have.deep.property('rootDomain', domain)
+
     })
   })
 
